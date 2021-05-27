@@ -35,8 +35,11 @@ public class Balon : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (hit.collider.gameObject == gameObject) Destroy(gameObject);
-            }
+                
+                if (hit.collider.gameObject == gameObject)Destroy(gameObject);
+                FindObjectOfType<AudioManager>().Play("BalonPatlatmaSesi1");
+                     
+            }            
         }
 
         /*if (Input.GetMouseButton(0))
